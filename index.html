@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Portal CBT - Ujian Sumatif Kimia 2026</title>
+  <title>Portal CBT - Ujian Sumatif Kimia X 2026</title>
   
   <!-- Font Kaligrafi Dancing Script & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,7 +29,7 @@
       padding: 0;
     }
 
-    /* Kunci seleksi teks di dashboard/modal agar tidak terganggu saat klik */
+    /* Kunci seleksi teks di elemen dashboard/modal agar tidak terganggu saat klik */
     .overlay, header, .card-footer-signature, button {
       -webkit-user-select: none;
       user-select: none;
@@ -120,7 +120,7 @@
       height: 46px;
     }
 
-    /* Animasi Gelembung Reaksi Kimia */
+    /* Animasi Gelembung Reaksi */
     @keyframes bubbleUp {
       0% { transform: translateY(0) scale(0.8); opacity: 0; }
       50% { opacity: 0.9; }
@@ -150,7 +150,7 @@
     }
 
     .card h1 {
-      font-size: 1.4rem;
+      font-size: 1.35rem;
       font-weight: 800;
       color: #0f172a;
       letter-spacing: -0.5px;
@@ -367,7 +367,7 @@
       to { opacity: 0.65; }
     }
 
-    /* === AREA GOOGLE FORM DENGAN SMOOTH TOUCH-SCROLL === */
+    /* === AREA GOOGLE FORM (TOUCH-SCROLL HP BEBAS MACET) === */
     .form-container {
       position: absolute;
       top: 60px;
@@ -379,7 +379,7 @@
       background: #ffffff;
       z-index: 10;
       
-      /* Mencegah layar terkandas / membeku di smartphone */
+      /* Mencegah layar terkandas di ponsel */
       overflow-y: auto !important;
       -webkit-overflow-scrolling: touch !important;
       touch-action: pan-y !important;
@@ -411,29 +411,24 @@
       <!-- Ikon Labu Erlenmeyer Kimia -->
       <div class="chemistry-badge">
         <svg class="chemistry-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Leher & Bibir Labu -->
           <rect x="27" y="10" width="10" height="4" rx="2" fill="#7c3aed" />
           <path d="M29 14V24L16 48C14.5 51 16.5 54 20 54H44C47.5 54 49.5 51 48 48L35 24V14H29Z" stroke="#7c3aed" stroke-width="2.5" stroke-linejoin="round"/>
-          
-          <!-- Cairan Kimia -->
           <path d="M20 48L24.5 40C28 41.5 36 38.5 39.5 40L44 48C45 50 43.5 52 41 52H23C20.5 52 19 50 20 48Z" fill="#a78bfa" fill-opacity="0.6"/>
           <path d="M20 48C24 49 28 47 32 48C36 49 40 47 44 48" stroke="#06b6d4" stroke-width="2" stroke-linecap="round"/>
-          
-          <!-- Gelembung Reaksi -->
           <circle class="bubble-1" cx="28" cy="38" r="2.5" fill="#06b6d4" />
           <circle class="bubble-2" cx="36" cy="34" r="2" fill="#7c3aed" />
         </svg>
       </div>
 
       <span class="sub-badge">Evaluasi Pembelajaran</span>
-      <h1>UJIAN SUMATIF KIMIA 2026</h1>
-      <p class="subtitle">Analisis reaksi dengan teliti, hitung stoikiometri, dan utamakan integritas.</p>
+      <h1>SUMATIF KIMIA KELAS X</h1>
+      <p class="subtitle">Analisis reaksi dengan teliti, periksa jawaban, dan utamakan integritas.</p>
 
       <!-- Panel Info Ujian -->
       <div class="info-grid">
         <div class="info-box">
           <span class="label">MATA PELAJARAN</span>
-          <span class="value">🧪 Kimia</span>
+          <span class="value">🧪 Kimia Kelas X</span>
         </div>
         <div class="info-box">
           <span class="label">DURASI WAKTU</span>
@@ -466,7 +461,7 @@
       </div>
 
       <button class="btn-glow" onclick="startExam()">
-        <span>Mulai Ujian Sumatif Kimia</span>
+        <span>Mulai Ujian Kimia X</span>
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </button>
 
@@ -514,29 +509,29 @@
         <path d="M7 16h10"></path>
       </svg>
       <div class="header-titles">
-        <span class="exam-title">Ujian Sumatif Kimia 2026</span>
+        <span class="exam-title">Sumatif Kimia Kelas X</span>
         <span class="violation-badge" id="violationText">Pelanggaran: 0/3</span>
       </div>
     </div>
     <div class="timer-badge" id="timer">60:00</div>
   </header>
 
-  <!-- Area Google Form Resmi Ujian Sumatif Kimia (Mode Semat Aktif) -->
+  <!-- Area Google Form Resmi Ujian Sumatif Kimia X (Mode Semat Aktif) -->
   <div class="form-container">
     <iframe 
       id="examFrame" 
-      src="https://docs.google.com/forms/d/e/1FAIpQLSdX73p38qo9a5lzhxXC51I8gaL7Jzn1M5TQjiMOIEB2T5V5_Q/viewform?embedded=true"
+      src="https://docs.google.com/forms/d/e/1FAIpQLSd-8oGb7gF3PyoRtyJjd90qGKTAfbdon5aSXEBXvLqbpnVHeA/viewform?embedded=true"
       frameborder="0" 
       marginheight="0" 
       marginwidth="0"
       scrolling="yes">
-      Memuat formulir Ujian Sumatif Kimia 2026...
+      Memuat formulir Sumatif Kimia Kelas X...
     </iframe>
   </div>
 
   <script>
     // === KONFIGURASI SISTEM UJIAN ===
-    const PROCTOR_TOKEN = "SUMATIFKIMIA2026"; // Token Pengawas Ujian Sumatif Kimia
+    const PROCTOR_TOKEN = "SUMATIFKIMIA2026"; // Token Pengawas Sumatif Kimia X
     let examDurationMinutes = 60;             
     const maxViolations = 3;                  
 
